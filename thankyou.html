@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Toddler Kits</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You — Toddler Kits</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <main class="thank-page">
+    <div class="thank-card">
+      <img src="https://i.ibb.co/8P2mQvM/celebrate.png" alt="Thank you" class="thank-art" />
+      <h1>Thank You, Parent!</h1>
+      <p class="muted">Your order was placed successfully.</p>
+      <p class="order-badge">Order ID: <strong id="order-id">N/A</strong></p>
+      <a class="btn btn-primary" href="index.html">Back to Home</a>
+    </div>
+  </main>
 
-<section class="thankyou-section">
-    <h1>Thank You Parents! 🎉</h1>
-
-    <h2>Your Order ID:</h2>
-    <p id="order-id" class="order-id"></p>
-
-    <a href="index.html" class="btn">Back to Home</a>
-</section>
-
-<script>
-const params = new URLSearchParams(window.location.search);
-document.getElementById("order-id").textContent = params.get("orderId");
-</script>
-
+  <script src="main.js"></script>
 </body>
 </html>
