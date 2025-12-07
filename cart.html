@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Cart - Toddler Kits</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Toddler Kits</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header>
-    <h1>Toddler Kits - Cart</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a class="active" href="cart.html">Cart</a>
-    </nav>
+  <h1>Toddler Kits - Cart</h1>
+  <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a class="active" href="cart.html">Cart</a>
+  </nav>
 </header>
 
 <section class="cart-page">
-    <h2>Your Cart</h2>
 
-    <div id="cart-items"></div>
+  <h2>Your Cart</h2>
 
-    <div class="cart-actions">
-        <button id="clearCartBtn" class="clear-btn">Clear Cart</button>
-        <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
-    </div>
+  <!-- Cart Items Display -->
+  <div id="cartContainer"></div>
+
+  <!-- Totals -->
+  <div class="cart-total">
+      <p><strong>Total Items:</strong> <span id="itemCount">0</span></p>
+      <p><strong>Total Amount:</strong> ₹<span id="totalAmount">0</span></p>
+  </div>
+
+  <div class="cart-buttons">
+      <button id="clearCartBtn">Clear Cart</button>
+      <button id="checkoutBtn">Checkout</button>
+  </div>
+
 </section>
 
 <script src="main.js"></script>
