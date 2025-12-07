@@ -3,70 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toddler Kits - Products</title>
+    <title>Toddler Kits | Products</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="main-header">
-    <div class="logo">🌿 Toddler Kits</div>
-    <nav class="navbar">
+<header>
+    <h1 class="logo">Toddler Kits</h1>
+    <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Toddler Items</a>
-        <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        <a href="cart.html">Cart <span id="cart-count">0</span></a>
         <a href="payments.html">Payments</a>
-        <a href="thankyou.html">Thank You</a>
     </nav>
 </header>
 
 <section class="products-section">
-    <h2 class="section-title">Our Cute Nature-Inspired Toddler Kits</h2>
+    <h2>Our Toddler Items</h2>
+    <div class="products-grid">
 
-    <div class="products-container">
-
-        <!-- ITEM 1 -->
+        <!-- PRODUCT 1 -->
         <div class="product-card">
-            <img src="https://i.ibb.co/TPMFKZ9/toddler-nature-kit.jpg" alt="">
-            <h3>Forest Explorer Toddler Kit</h3>
-            <p class="price">₹899</p>
-            <button class="btn-add" onclick="addToCart('Forest Explorer Toddler Kit', 899)">Add to Cart</button>
-            <a href="payments.html" class="btn-secondary small-btn">Book Now</a>
+            <img src="https://i.ibb.co/SvFPRZy/kit1.jpg">
+            <h3>Nature Play Kit</h3>
+            <p class="price">₹799</p>
+            <button onclick="addToCart('Nature Play Kit', 799)" class="btn-cart">Add to Cart</button>
+            <a href="payments.html" class="btn secondary">Book Now</a>
         </div>
 
-        <!-- ITEM 2 -->
+        <!-- PRODUCT 2 -->
         <div class="product-card">
-            <img src="https://i.ibb.co/yW3SpCL/toddler-animal-toys.jpg" alt="">
-            <h3>Animal Friends Activity Box</h3>
-            <p class="price">₹750</p>
-            <button class="btn-add" onclick="addToCart('Animal Friends Activity Box', 750)">Add to Cart</button>
-            <a href="payments.html" class="btn-secondary small-btn">Book Now</a>
-        </div>
-
-        <!-- ITEM 3 -->
-        <div class="product-card">
-            <img src="https://i.ibb.co/Bws7j8c/world-theme-toy.jpg" alt="">
-            <h3>World Explorer Sensory Kit</h3>
+            <img src="https://i.ibb.co/2jN3CVX/kit2.jpg">
+            <h3>World Explorer Set</h3>
             <p class="price">₹999</p>
-            <button class="btn-add" onclick="addToCart('World Explorer Sensory Kit', 999)">Add to Cart</button>
-            <a href="payments.html" class="btn-secondary small-btn">Book Now</a>
+            <button onclick="addToCart('World Explorer Set', 999)" class="btn-cart">Add to Cart</button>
+            <a href="payments.html" class="btn secondary">Book Now</a>
         </div>
 
-        <!-- ITEM 4 -->
+        <!-- PRODUCT 3 -->
         <div class="product-card">
-            <img src="https://i.ibb.co/PzhmXZk/nature-playset.jpg" alt="">
-            <h3>Nature Playset for Toddlers</h3>
-            <p class="price">₹650</p>
-            <button class="btn-add" onclick="addToCart('Nature Playset for Toddlers', 650)">Add to Cart</button>
-            <a href="payments.html" class="btn-secondary small-btn">Book Now</a>
+            <img src="https://i.ibb.co/f83XQnj/kit3.jpg">
+            <h3>Animal Friends Kit</h3>
+            <p class="price">₹699</p>
+            <button onclick="addToCart('Animal Friends Kit', 699)" class="btn-cart">Add to Cart</button>
+            <a href="payments.html" class="btn secondary">Book Now</a>
         </div>
 
     </div>
 </section>
 
-<footer class="footer">
-    <p>© 2025 Toddler Kits. All Rights Reserved.</p>
+<footer>
+    <p>© Toddler Kits</p>
 </footer>
 
+<script src="cart.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
