@@ -1,26 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Payment - Toddler Kits</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Toddler Kits</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-<header>
-  <h1>Toddler Kits</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-bubble">TK</div>
+      <div class="brand-text">
+        <h1 class="brand-title">Toddler Kits</h1>
+        <p class="brand-sub">Checkout</p>
+      </div>
+    </div>
 
-<div class="container">
-  <h2>Payment Page</h2>
-  <p>Click the button below to complete your payment.</p>
-  <button onclick="makePayment()">Pay Now</button>
-</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Toddler Items</a>
+      <a href="cart.html" class="nav-link">Cart <span id="cart-count" class="cart-count">0</span></a>
+      <a href="payments.html" class="nav-link">Payments</a>
+    </nav>
+  </header>
 
-<script src="main.js"></script>
+  <main>
+    <section class="checkout-section">
+      <h2>Payment & Delivery</h2>
+
+      <div class="checkout-grid">
+        <form id="payment-form" class="payment-form" onsubmit="processOrder(event)">
+          <h3>Parent / Guardian Details</h3>
+
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" required />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+
+          <label for="paymentmethod">Payment method</label>
+          <select id="paymentmethod" required>
+            <option value="upi">UPI</option>
+            <option value="card">Debit / Credit Card</option>
+            <option value="cod">Cash on Delivery</option>
+          </select>
+
+          <button class="btn btn-primary full" type="submit">Place Order</button>
+        </form>
+
+        <aside class="order-preview">
+          <h3>Order summary</h3>
+          <div id="summary-items" class="summary-items"></div>
+          <div class="summary-total">Total: ₹<span id="summary-total">0</span></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Toddler Kits</div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
