@@ -1,0 +1,252 @@
+/* ---------------- GLOBAL RESET ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f9f4; /* nature soft green */
+    color: #333;
+}
+
+/* ---------------- HEADER ---------------- */
+.main-header {
+    background: #ffffff;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #5a7d48;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    color: #5a7d48;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #e6f4ea, #fdfbf6);
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #3d5831;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons button {
+    padding: 12px 22px;
+    margin-right: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #6a9f4b;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #6a9f4b;
+    border: 1px solid #6a9f4b;
+}
+
+/* ---------------- PRODUCT GRID ---------------- */
+.products-section {
+    padding: 40px 5%;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product-card h3 {
+    margin: 15px 0 8px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------------- PAYMENT FORM ---------------- */
+.payment-section {
+    padding: 40px 5%;
+}
+
+.payment-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.payment-box label {
+    font-weight: 600;
+}
+
+.payment-box input,
+.payment-box textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0 20px;
+}
+
+.order-summary-box {
+    margin-top: 20px;
+    background: #f8fff5;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ---------------- CART PAGE ---------------- */
+.cart-section {
+    padding: 40px 5%;
+}
+
+.cart-container {
+    display: flex;
+    gap: 40px;
+}
+
+.cart-items-list {
+    width: 65%;
+}
+
+.cart-item {
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background: #ffdddd;
+    color: #b53030;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cart-summary-box {
+    width: 30%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.total-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.full-btn {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* ---------------- THANK YOU PAGE ---------------- */
+.thankyou-box {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.thankyou-box h1 {
+    font-size: 48px;
+    color: #4e7b39;
+}
+
+.order-id {
+    font-size: 26px;
+    margin-top: 20px;
+    color: #444;
+}
+
+.back-home-btn {
+    margin-top: 40px;
+    padding: 14px 24px;
+    background: #6a9f4b;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    margin-top: 40px;
+    background: #3f5935;
+    padding: 30px 5%;
+    color: #fff;
+    text-align: center;
+}
