@@ -1,42 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Cart - Toddler Kits</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-
+<body onload="loadCart()">
 <header>
-  <h1>Toddler Kits - Cart</h1>
+  <h1>Toddler Kits</h1>
   <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a class="active" href="cart.html">Cart</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
   </nav>
 </header>
 
-<section class="cart-page">
-
+<div class="container">
   <h2>Your Cart</h2>
 
-  <!-- Cart Items Display -->
-  <div id="cartContainer"></div>
+  <div id="cart-items"></div>
 
-  <!-- Totals -->
-  <div class="cart-total">
-      <p><strong>Total Items:</strong> <span id="itemCount">0</span></p>
-      <p><strong>Total Amount:</strong> ₹<span id="totalAmount">0</span></p>
-  </div>
+  <h3>Total: ₹<span id="cart-total">0</span></h3>
 
-  <div class="cart-buttons">
-      <button id="clearCartBtn">Clear Cart</button>
-      <button id="checkoutBtn">Checkout</button>
-  </div>
-
-</section>
+  <button onclick="clearCart()">Clear Cart</button>
+  <button onclick="goToCheckout()">Checkout</button>
+</div>
 
 <script src="main.js"></script>
 </body>
