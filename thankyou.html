@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Toddler Kits</title>
+    <title>Thank You | Toddler Kits</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="thankyou-body">
+
+<body>
 
 <section class="thankyou-section">
-    <h1>🎉 Thank You, Parents! 🎉</h1>
-    <p>Your order has been placed successfully.</p>
+    <h1>Thank You Parents! 🎉</h1>
 
     <h2>Your Order ID:</h2>
-    <p class="order-id" id="order-id">Loading...</p>
+    <p id="order-id" class="order-id"></p>
 
-    <a href="index.html" class="btn-primary">Back to Home</a>
+    <a href="index.html" class="btn">Back to Home</a>
 </section>
 
 <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    document.getElementById("order-id").textContent = urlParams.get("orderId") || "N/A";
+const params = new URLSearchParams(window.location.search);
+document.getElementById("order-id").textContent = params.get("orderId");
 </script>
 
 </body>
