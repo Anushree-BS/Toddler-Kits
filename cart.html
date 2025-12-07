@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Cart - Toddler Kits</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Cart — Toddler Kits</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-bubble">TK</div>
+      <div class="brand-text">
+        <h1 class="brand-title">Toddler Kits</h1>
+        <p class="brand-sub">Cart</p>
+      </div>
+    </div>
 
-<body onload="loadCart()">
-<header>
-  <h1>Toddler Kits</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-  </nav>
-</header>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Toddler Items</a>
+      <a href="cart.html" class="nav-link">Cart <span id="cart-count" class="cart-count">0</span></a>
+      <a href="payments.html" class="nav-link">Payments</a>
+    </nav>
+  </header>
 
-<div class="container">
-  <h2>Your Cart</h2>
+  <main>
+    <section class="cart-section">
+      <h2>Your Cart</h2>
 
-  <div id="cart-items"></div>
+      <div class="cart-layout">
+        <div class="cart-list" id="cart-items">
+          <!-- items injected by main.js -->
+        </div>
 
-  <h3>Total: ₹<span id="cart-total">0</span></h3>
+        <aside class="cart-side">
+          <div class="summary-card">
+            <h3>Order Summary</h3>
+            <div id="cart-summary-items" class="summary-items"></div>
+            <div class="summary-total">Total: ₹<span id="cart-total">0</span></div>
+            <div class="summary-actions">
+              <button id="checkout-btn" class="btn btn-primary full" onclick="checkoutFromCart()">Checkout</button>
+              <button id="clear-btn" class="btn btn-ghost full" onclick="clearCart()">Clear cart</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-  <button onclick="clearCart()">Clear Cart</button>
-  <button onclick="goToCheckout()">Checkout</button>
-</div>
+  <footer class="site-footer">
+    <div>© 2025 Toddler Kits</div>
+  </footer>
 
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
