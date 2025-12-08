@@ -120,7 +120,7 @@
       alert('Your cart is empty!');
       return;
     }
-    window.location.href = 'payments.html';
+    window.location.href = 'https://toddlercloset.netlify.app/payments';
   };
 
   // render payment summary
